@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>NOVA — The first vodka distilled by intelligence</title>
+<style>/* ========= NOVA — AI VODKA ========= */
+/* latin */
+@font-face {
+  font-family: 'Bowlby One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("44e2363b-f2f2-46e8-aab2-285948eb16c4") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6a8784af-91b6-4d7f-8cc9-8e7337f1f0db") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bf3931fa-bdfe-4455-bb03-591960799e1c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2b55f9a7-96e7-4290-b65b-7c5c6f0de475") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a9d3d83a-3d7e-4214-bc8e-f8d389da8956") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("de8a4c98-f7f4-4594-b70f-ba34591c021f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("14d20f71-2c25-47db-8f00-88b92a429a0b") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("374cde71-9165-4ba2-8ae6-2163f9b34f16") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ba5861cb-f1db-4b2c-9e94-d933e0e390c3") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9b5140a9-2004-4738-8f99-dc82eb0cec2b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("cff2d695-e49c-43ee-a140-b4a5b2d1dc3a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("de8a4c98-f7f4-4594-b70f-ba34591c021f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("14d20f71-2c25-47db-8f00-88b92a429a0b") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("374cde71-9165-4ba2-8ae6-2163f9b34f16") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ba5861cb-f1db-4b2c-9e94-d933e0e390c3") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("9b5140a9-2004-4738-8f99-dc82eb0cec2b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("cff2d695-e49c-43ee-a140-b4a5b2d1dc3a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b7106e56-b140-479c-8ba7-f4a5852c94bc") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4e5602a3-1ccf-48b4-96e8-c549dd159fd3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root {
+  --bg: #0a0908;
+  --bg-2: #121010;
+  --ink: #EFE6D2;
+  --ink-dim: rgba(239, 230, 210, 0.55);
+  --ink-ghost: rgba(239, 230, 210, 0.12);
+  --accent: #C0441E;
+  --accent-deep: #8a2f14;
+  --accent-glow: #e65a2b;
+  --line: rgba(239, 230, 210, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+body {
+  /* film grain overlay */
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.9  0 0 0 0 0.82  0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(0,0,0,0.55) 100%);
+}
+
+/* Typography classes */
+.display {
+  font-family: 'Bowlby One', 'Staatliches', Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.display-condensed {
+  font-family: 'Staatliches', 'Bowlby One', Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.serif { font-family: 'Instrument Serif', Georgia, serif; }
+.serif-italic { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; }
+
+/* Outlined text (like reference) */
+.outline {
+  -webkit-text-stroke: 1px var(--ink);
+  color: transparent;
+}
+
+/* Utility */
+.accent { color: var(--accent); }
+.ink-dim { color: var(--ink-dim); }
+
+/* ========= NAV ========= */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  background: rgba(10, 9, 8, 0.35);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid rgba(239, 230, 210, 0.08);
+}
+
+.nav-logo {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-cart {
+  border: 1px solid currentColor;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-cart:hover { background: var(--ink); color: var(--bg); }
+
+/* ========= HERO (virtual scroll + WebGL) ========= */
+.hero {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  background: transparent;
+  pointer-events: none;
+}
+.hero-cta, .nav-cart, .hero-meta-bottom button { pointer-events: auto; }
+
+.hero-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  display: block;
+  pointer-events: none;
+}
+
+.hero-type {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+.hero-type__line {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(240px, 38vw, 640px);
+  line-height: 0.82;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  white-space: nowrap;
+  user-select: none;
+  position: absolute;
+}
+
+.hero-type__line--outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(192, 68, 30, 0.28);
+}
+
+/* After hero, content flows above the fixed hero — but transparent bg so canvas can show through on manifesto */
+.content-flow {
+  position: relative;
+  z-index: 10;
+  margin-top: 100vh;
+  background: transparent;
+}
+
+/* Individual section backgrounds (manifesto stays transparent so bottle shows) */
+.marquee { background: var(--bg); }
+.manifesto { background: transparent; }
+.process { background: var(--bg); }
+/* cocktail already has its own bg */
+.press { background: var(--bg); }
+.findus { background: var(--bg); }
+.footer { background: var(--bg); }
+
+.hero-meta-top {
+  position: absolute;
+  top: 100px;
+  left: 36px;
+  right: 36px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+  will-change: transform, opacity;
+}
+
+.hero-meta-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 36px;
+  right: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 4;
+  gap: 40px;
+  will-change: transform, opacity;
+}
+
+.hero-tag {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 20px;
+  max-width: 380px;
+  line-height: 1.25;
+  color: var(--ink-dim);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 999px;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.hero-cta:hover { transform: translateY(-2px); }
+
+.hero-cta .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--bg);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.6); }
+}
+
+/* NEW badge */
+.hero-badge {
+  position: absolute;
+  top: 26%;
+  right: 8%;
+  width: 130px;
+  height: 130px;
+  z-index: 4;
+  animation: spin 18s linear infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* SplitText reveal lines */
+.split-line {
+  display: block;
+  overflow: hidden;
+}
+.split-line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.split-line.is-in > span {
+  transform: translateY(0);
+}
+.split-line:nth-child(2) > span { transition-delay: 0.06s; }
+.split-line:nth-child(3) > span { transition-delay: 0.12s; }
+.split-line:nth-child(4) > span { transition-delay: 0.18s; }
+
+/* Scroll indicator */
+.scroll-ind {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.scroll-ind .bar {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--ink-dim));
+  animation: drop 2s ease-in-out infinite;
+}
+
+@keyframes drop {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.01% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ========= MARQUEE ========= */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+  background: var(--bg);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 64px;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 52px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.marquee-track span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+.marquee-sep {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ========= SECTION ========= */
+section {
+  position: relative;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+/* ========= MANIFESTO ========= */
+.manifesto {
+  padding: 200px 0;
+  position: relative;
+  overflow: visible;
+}
+
+.manifesto-bottle { display: none !important; }
+
+.manifesto-bottle.is-in {
+  opacity: 1;
+  transform: rotate(8deg) translateY(0);
+}
+
+@media (max-width: 900px) {
+  .manifesto-bottle { display: none; }
+}
+
+.manifesto-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.manifesto-body {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(34px, 4.4vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 1100px;
+}
+
+.manifesto-body .reveal-line {
+  display: block;
+  overflow: hidden;
+}
+
+.manifesto-body .reveal-line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.manifesto-body.is-visible .reveal-line > span {
+  transform: translateY(0);
+}
+
+.manifesto-body .reveal-line:nth-child(2) > span { transition-delay: 0.08s; }
+.manifesto-body .reveal-line:nth-child(3) > span { transition-delay: 0.16s; }
+.manifesto-body .reveal-line:nth-child(4) > span { transition-delay: 0.24s; }
+.manifesto-body .reveal-line:nth-child(5) > span { transition-delay: 0.32s; }
+.manifesto-body .reveal-line:nth-child(6) > span { transition-delay: 0.4s; }
+
+.manifesto-body em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.manifesto-foot {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.manifesto-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.manifesto-stat .num {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.manifesto-stat .lbl {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-dim);
+  max-width: 220px;
+}
+
+/* ========= PROCESS (scroll-linked carousel) ========= */
+.process {
+  padding: 0;
+  position: relative;
+}
+
+.process-pin {
+  position: relative;
+  height: 500vh; /* 4 steps × ~1.25vh scroll each */
+}
+
+.process-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(360px, 38%) 1fr;
+  gap: 40px;
+  padding: 120px 48px 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.process-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.process-heading {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(44px, 4.5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 24px 0 40px;
+}
+.process-heading em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  color: var(--accent);
+  text-transform: none;
+}
+
+.process-steps {
+  flex: 1;
+  position: relative;
+  min-height: 260px;
+}
+
+.process-step {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
+}
+.process-step.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.process-step__num {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(88px, 9vw, 148px);
+  line-height: 0.85;
+  color: var(--accent);
+  margin-bottom: 16px;
+  letter-spacing: -0.04em;
+}
+.process-step__label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.process-step__title {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(28px, 2.6vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  max-width: 480px;
+}
+.process-step__desc {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(17px, 1.2vw, 21px);
+  line-height: 1.45;
+  color: rgba(239, 230, 210, 0.78);
+  max-width: 460px;
+}
+.process-step__desc em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.process-pagination {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.process-pagination__count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: rgba(239, 230, 210, 0.7);
+  min-width: 78px;
+}
+.process-pagination__sep {
+  color: rgba(239, 230, 210, 0.3);
+  margin: 0 4px;
+}
+.process-pagination__track {
+  flex: 1;
+  height: 1px;
+  background: rgba(239, 230, 210, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.process-pagination__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.process-reel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.process-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(48vw, 560px);
+  height: min(72vh, 720px);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.process-slide__frame {
+  flex: 1;
+  border-radius: 2px;
+  border: 1px dashed rgba(239, 230, 210, 0.18);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-slide__tag {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(239, 230, 210, 0.7);
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.process-slide__caption {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* ========= PROCESS MOBILE ========= */
+@media (max-width: 900px) {
+  .process-pin { height: auto; }
+  .process-stage {
+    position: relative;
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 80px 24px;
+    gap: 40px;
+    overflow: visible;
+  }
+  .process-steps { min-height: 0; }
+  .process-step {
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .process-reel {
+    height: auto;
+    display: block;
+  }
+  .process-slide {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 70vh;
+    transform: none;
+    margin-bottom: 24px;
+    opacity: 1;
+  }
+}
+
+/* ========= COCKTAIL GENERATOR ========= */
+.cocktail {
+  padding: 160px 0;
+  position: relative;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(192, 68, 30, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(192, 68, 30, 0.15), transparent 50%),
+    var(--bg);
+}
+
+.cocktail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.cocktail-left h2 {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(56px, 8vw, 140px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.cocktail-left h2 em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+.cocktail-intro {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink-dim);
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+
+.cocktail-form {
+  display: grid;
+  gap: 20px;
+}
+
+.cocktail-form label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 10px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.chip:hover { border-color: var(--ink); }
+.chip.is-active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.cocktail-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  padding: 12px 0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.cocktail-input:focus { border-color: var(--accent); }
+.cocktail-input::placeholder { color: var(--ink-ghost); font-style: italic; }
+
+.cocktail-generate {
+  margin-top: 20px;
+  padding: 20px 36px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 999px;
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.cocktail-generate:hover { transform: translateY(-2px); background: var(--accent-glow); }
+.cocktail-generate:disabled { opacity: 0.6; cursor: wait; }
+
+.cocktail-generate .arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.cocktail-generate:hover .arrow { transform: translateX(4px); }
+
+/* Result card */
+.cocktail-result {
+  position: sticky;
+  top: 100px;
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(10, 9, 8, 0.7);
+  backdrop-filter: blur(10px);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cocktail-result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+
+.result-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.result-status .led {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.result-status.idle .led { background: var(--ink-dim); box-shadow: none; animation: none; }
+
+.cocktail-result-title {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 48px;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  min-height: 44px;
+}
+
+.cocktail-result-sub {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-dim);
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.cocktail-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.cocktail-ingredients {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.cocktail-ingredients li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--ink-ghost);
+  font-family: 'Instrument Serif', serif;
+  font-size: 17px;
+}
+
+.cocktail-ingredients li span:last-child {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-dim);
+  letter-spacing: 0.05em;
+}
+
+.cocktail-method {
+  font-family: 'Instrument Serif', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.cocktail-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink-dim);
+  max-width: 340px;
+  margin: auto;
+  line-height: 1.35;
+}
+
+/* Scramble text */
+.scramble {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========= PRESS ========= */
+.press {
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.press-quote {
+  grid-column: span 4;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 60px;
+  max-width: 1100px;
+}
+
+.press-quote .accent { font-style: normal; font-family: 'Bowlby One', Impact, sans-serif; }
+
+.press-logo {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.press-logo:hover { color: var(--ink); }
+
+.press-logo.serif-logo {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  font-size: 30px;
+}
+
+/* ========= FIND US ========= */
+.findus {
+  padding: 160px 0;
+}
+
+.findus-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.findus-head h2 {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(64px, 10vw, 160px);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.findus-search {
+  position: relative;
+  min-width: 320px;
+}
+
+.findus-search input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  padding: 14px 0 14px 28px;
+  font-family: 'Instrument Serif', serif;
+  font-size: 20px;
+  outline: none;
+}
+
+.findus-search::before {
+  content: '◎';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.findus-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.findus-item {
+  background: var(--bg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.findus-item:hover { background: var(--bg-2); }
+
+.findus-item .city {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.findus-item .name {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.findus-item .addr {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-dim);
+  margin-top: auto;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  position: relative;
+  padding: 100px 0 40px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.footer-super {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: clamp(120px, 22vw, 360px);
+  line-height: 0.78;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 60px;
+  text-align: center;
+  will-change: transform;
+}
+
+.footer-super .hollow {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accent);
+  display: block;
+}
+
+.footer-news {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.footer-news p {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink-dim);
+  margin-bottom: 24px;
+}
+
+.footer-news-form {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+}
+
+.footer-news-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  padding: 14px 0;
+  font-family: 'Instrument Serif', serif;
+  font-size: 20px;
+  outline: none;
+}
+
+.footer-news-form input::placeholder { color: var(--ink-ghost); font-style: italic; }
+
+.footer-news-form button {
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 14px 0 14px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-news-form button:hover .arrow { transform: translateX(4px); }
+.footer-news-form button .arrow { transition: transform 0.3s; display: inline-block; }
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 16px;
+}
+
+.footer-col a,
+.footer-col li {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 6px 0;
+  font-family: 'Instrument Serif', serif;
+  font-size: 18px;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-legal {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* ========= TWEAKS PANEL ========= */
+.tweaks-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  width: 280px;
+  background: rgba(10, 9, 8, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  display: none;
+}
+
+.tweaks-panel.is-open { display: block; }
+
+.tweaks-panel h3 {
+  font-family: 'Bowlby One', Impact, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweak-row {
+  margin-bottom: 14px;
+}
+
+.tweak-row label {
+  display: block;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 8px;
+}
+
+.swatch-row { display: flex; gap: 6px; }
+
+.swatch {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.swatch:hover { transform: scale(1.1); }
+.swatch.is-active { border-color: var(--ink); transform: scale(1.1); }
+
+/* Reveal utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .cocktail-grid { grid-template-columns: 1fr; }
+  .manifesto-foot { grid-template-columns: 1fr; }
+  .process-card { grid-template-columns: 1fr; padding: 40px 28px; }
+  .findus-list { grid-template-columns: 1fr; }
+  .footer-bottom { grid-template-columns: 1fr 1fr; }
+  .press-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-meta-bottom { flex-direction: column; align-items: start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-logo">NOVA<span style="color:var(--accent)">◉</span></div>
+  <ul class="nav-links">
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#cocktail">AI Bartender</a></li>
+    <li><a href="#findus">Find Us</a></li>
+  </ul>
+  <button class="nav-cart">Shop — 0</button>
+</nav>
+
+<!-- WebGL bottle canvas (outside hero so it can overlap content below) -->
+<canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+<!-- ============ HERO (virtual-scroll + WebGL) ============ -->
+<section class="hero" data-screen-label="01 Hero" id="hero">
+  <!-- Giant parallax type behind bottle -->
+  <div class="hero-type" data-parallax-y="-0.25" data-parallax-scale="0.4">
+    <div class="hero-type__line hero-type__line--outline">NOVA</div>
+    <div class="hero-type__line">NOVA</div>
+  </div>
+
+  <!-- Top meta -->
+  <div class="hero-meta-top" data-parallax-y="0.08" data-fade="1">
+    <div class="mono ink-dim">
+      N°001 — LIMITED DROP<br>
+      <span class="accent">■</span> BATCH 000.014
+    </div>
+    <div class="mono ink-dim" style="text-align:right">
+      EST. 2026 / DISTILLED BY<br>
+      NEURAL NETWORK
+    </div>
+  </div>
+
+  <!-- Spinning badge -->
+  <div class="hero-badge" data-parallax-y="0.35" data-fade="1.2">
+    <svg viewBox="0 0 130 130" width="130" height="130">
+      <defs>
+        <path id="circle" d="M 65, 65 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path>
+      </defs>
+      <text font-family="Bowlby One, Impact, sans-serif" font-size="10" fill="#EFE6D2" letter-spacing="3">
+        <textPath href="#circle">NEURAL DISTILLED · LIMITED BATCH · NEURAL DISTILLED · LIMITED BATCH · </textPath>
+      </text>
+      <circle cx="65" cy="65" r="28" fill="#C0441E"></circle>
+      <text x="65" y="62" text-anchor="middle" fill="#EFE6D2" font-family="Bowlby One, Impact, sans-serif" font-size="11" letter-spacing="1">NEW</text>
+      <text x="65" y="75" text-anchor="middle" fill="#EFE6D2" font-family="Instrument Serif, serif" font-style="italic" font-size="8">batch 14</text>
+    </svg>
+  </div>
+
+  <!-- Bottom meta -->
+  <div class="hero-meta-bottom" data-parallax-y="0.3" data-fade="1">
+    <div class="hero-tag" data-split-lines="">
+      Distilled from winter wheat and a neural network trained on 4,000 years of spirit-making. <em>Precise. Smooth. Intelligent.</em>
+    </div>
+    <button class="hero-cta">
+      <span class="dot"></span>
+      Reserve a bottle
+    </button>
+    <div class="mono ink-dim" style="text-align:right">
+      SCROLL TO ENTER<br>
+      <span class="accent">↓</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENT FLOW (sits above fixed hero) ============ -->
+<div class="content-flow">
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Neural Distilled</span><span class="marquee-sep">◉</span>
+    <span>Precision Blended</span><span class="marquee-sep">◉</span>
+    <span>40% ABV</span><span class="marquee-sep">◉</span>
+    <span>Batch 000.014</span><span class="marquee-sep">◉</span>
+    <span>Est. 2026</span><span class="marquee-sep">◉</span>
+    <span>Neural Distilled</span><span class="marquee-sep">◉</span>
+    <span>Precision Blended</span><span class="marquee-sep">◉</span>
+    <span>40% ABV</span><span class="marquee-sep">◉</span>
+    <span>Batch 000.014</span><span class="marquee-sep">◉</span>
+    <span>Est. 2026</span><span class="marquee-sep">◉</span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto" id="manifesto" data-screen-label="02 Manifesto">
+  <div class="container">
+    <div class="manifesto-head">
+      <div>
+        <div class="section-label mono ink-dim">Manifesto — N°01</div>
+        <h3 class="display-condensed" style="font-size:32px;">For the new era of spirits</h3>
+      </div>
+      <div class="mono ink-dim" style="max-width:280px;">
+        A letter from the distillery /<br>
+        <span class="accent">— The founders</span>
+      </div>
+    </div>
+
+    <img src="bbed3649-88e7-4631-99ee-b81121617a77" class="manifesto-bottle" alt="" data-reveal-bottle="" style="display:none">
+
+    <div class="manifesto-body" id="manifestoBody">
+      <span class="reveal-line"><span>We trained a neural network on four</span></span>
+      <span class="reveal-line"><span>thousand years of <em>spirit-making</em>.</span></span>
+      <span class="reveal-line"><span>It studied every still, every grain,</span></span>
+      <span class="reveal-line"><span>every mistake and masterpiece —</span></span>
+      <span class="reveal-line"><span>then designed a vodka that shouldn't</span></span>
+      <span class="reveal-line"><span>exist. <em>So we built it.</em></span></span>
+    </div>
+
+    <div class="manifesto-foot" id="manifestoFoot">
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="4,287">0</div>
+        <div class="lbl">distillation simulations run before the first drop</div>
+      </div>
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="97.4%">0</div>
+        <div class="lbl">mouthfeel correlation vs. human master blender</div>
+      </div>
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="000.014">0</div>
+        <div class="lbl">current batch, distilled in Warsaw, Poland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS (scroll-linked carousel) ============ -->
+<section class="process" id="process" data-screen-label="03 Process">
+  <div class="process-pin">
+    <div class="process-stage">
+
+      <!-- LEFT: step info (cross-fades with active step) -->
+      <aside class="process-info">
+        <div class="section-label mono ink-dim">The Process</div>
+        <h2 class="process-heading">How a machine<br>learns to <em>taste</em>.</h2>
+
+        <div class="process-steps" id="processSteps">
+          <article class="process-step is-active" data-step="0">
+            <div class="process-step__num">01</div>
+            <div class="process-step__label mono ink-dim">— Step One</div>
+            <h3 class="process-step__title">We feed it history.</h3>
+            <p class="process-step__desc">A corpus of 4,287 recipes, tasting notes from Michelin somms, and mass spectrometry of every vodka distilled in the last century. The model learns what <em>"smooth"</em> actually means at a molecular level.</p>
+          </article>
+          <article class="process-step" data-step="1">
+            <div class="process-step__num">02</div>
+            <div class="process-step__label mono ink-dim">— Step Two</div>
+            <h3 class="process-step__title">It designs the still.</h3>
+            <p class="process-step__desc">The model proposes geometries our master distiller never would — 11 plates instead of 9, a cooler condensation curve, triple filtration through volcanic charcoal <em>and</em> silver. We build what it recommends.</p>
+          </article>
+          <article class="process-step" data-step="2">
+            <div class="process-step__num">03</div>
+            <div class="process-step__label mono ink-dim">— Step Three</div>
+            <h3 class="process-step__title">We taste. It listens.</h3>
+            <p class="process-step__desc">Every batch is blind-tested by twelve human palates. Their notes — too sweet, metallic finish, echoes of rye — feed back into the model. It re-tunes. We re-distill. After 47 iterations, something new.</p>
+          </article>
+          <article class="process-step" data-step="3">
+            <div class="process-step__num">04</div>
+            <div class="process-step__label mono ink-dim">— Step Four</div>
+            <h3 class="process-step__title">The bottle ships.</h3>
+            <p class="process-step__desc">Each bottle carries a unique batch signature. Scan it, and the model tells you exactly which iteration you're drinking — and generates a cocktail tuned to <em>your</em> palate. That's next.</p>
+          </article>
+        </div>
+
+        <div class="process-pagination" id="processPagination">
+          <span class="process-pagination__count"><span id="processStepCurrent">01</span> <span class="process-pagination__sep">/</span> 04</span>
+          <div class="process-pagination__track">
+            <div class="process-pagination__fill" id="processProgress"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: card reel -->
+      <div class="process-reel" id="processReel">
+
+        <!-- Card 1 — DATA -->
+        <article class="process-slide" data-slide="0">
+          <div class="process-slide__tag mono">01 · DATA</div>
+          <div class="process-slide__frame" style="background:#1a0f0b;overflow:hidden;">
+            <img src="686afa56-0246-4714-a261-4068619b1438" alt="Woman with red lips and red nails sipping vodka on the rocks" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="process-slide__caption mono ink-dim">4,287 RECIPES · 1.2M DATAPOINTS</div>
+        </article>
+
+        <!-- Card 2 — STILL -->
+        <article class="process-slide" data-slide="1">
+          <div class="process-slide__tag mono">02 · DESIGN</div>
+          <div class="process-slide__frame" style="background:#0f0d0c;overflow:hidden;">
+            <img src="bab0294e-88ae-4fdf-8e67-509eae799620" alt="Hand-drawn distillation column blueprint with compass and ink bottle" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="process-slide__caption mono ink-dim">GEOMETRY BY NEURAL NET · BUILT IN WARSAW</div>
+        </article>
+
+        <!-- Card 3 — FEEDBACK -->
+        <article class="process-slide" data-slide="2">
+          <div class="process-slide__tag mono">03 · TASTE</div>
+          <div class="process-slide__frame" style="background: linear-gradient(165deg, var(--accent) 0%, #8a2f14 100%); color: var(--bg);">
+            <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="padding:60px;box-sizing:border-box">
+              <g fill="#0a0908">
+                <rect x="10" y="140" width="4" height="20"></rect><rect x="20" y="120" width="4" height="60"></rect>
+                <rect x="30" y="80" width="4" height="140"></rect><rect x="40" y="100" width="4" height="100"></rect>
+                <rect x="50" y="60" width="4" height="180"></rect><rect x="60" y="90" width="4" height="120"></rect>
+                <rect x="70" y="130" width="4" height="40"></rect><rect x="80" y="100" width="4" height="100"></rect>
+                <rect x="90" y="70" width="4" height="160"></rect><rect x="100" y="110" width="4" height="80"></rect>
+                <rect x="110" y="90" width="4" height="120"></rect><rect x="120" y="130" width="4" height="40"></rect>
+                <rect x="130" y="80" width="4" height="140"></rect><rect x="140" y="100" width="4" height="100"></rect>
+                <rect x="150" y="60" width="4" height="180"></rect><rect x="160" y="90" width="4" height="120"></rect>
+                <rect x="170" y="120" width="4" height="60"></rect><rect x="180" y="70" width="4" height="160"></rect>
+                <rect x="190" y="100" width="4" height="100"></rect><rect x="200" y="50" width="4" height="200"></rect>
+                <rect x="210" y="80" width="4" height="140"></rect><rect x="220" y="110" width="4" height="80"></rect>
+                <rect x="230" y="70" width="4" height="160"></rect><rect x="240" y="90" width="4" height="120"></rect>
+                <rect x="250" y="130" width="4" height="40"></rect><rect x="260" y="100" width="4" height="100"></rect>
+                <rect x="270" y="60" width="4" height="180"></rect><rect x="280" y="120" width="4" height="60"></rect>
+                <rect x="290" y="90" width="4" height="120"></rect><rect x="300" y="70" width="4" height="160"></rect>
+                <rect x="310" y="110" width="4" height="80"></rect><rect x="320" y="100" width="4" height="100"></rect>
+                <rect x="330" y="130" width="4" height="40"></rect><rect x="340" y="80" width="4" height="140"></rect>
+                <rect x="350" y="100" width="4" height="100"></rect><rect x="360" y="120" width="4" height="60"></rect>
+                <rect x="370" y="140" width="4" height="20"></rect>
+              </g>
+              <text x="10" y="285" fill="#0a0908" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1">FEEDBACK LOOP · 47 ITERATIONS</text>
+            </svg>
+          </div>
+          <div class="process-slide__caption mono ink-dim">12 HUMAN PALATES · 47 BATCHES</div>
+        </article>
+
+        <!-- Card 4 — SHIP -->
+        <article class="process-slide" data-slide="3">
+          <div class="process-slide__tag mono">04 · SHIP</div>
+          <div class="process-slide__frame" style="background: linear-gradient(165deg, #14100e 0%, #2a1810 100%);">
+            <svg viewBox="0 0 300 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="padding:60px;box-sizing:border-box">
+              <g fill="#EFE6D2">
+                <rect x="40" y="40" width="30" height="30"></rect><rect x="80" y="40" width="15" height="15"></rect>
+                <rect x="105" y="40" width="15" height="30"></rect><rect x="130" y="40" width="30" height="15"></rect>
+                <rect x="170" y="40" width="15" height="30"></rect><rect x="195" y="40" width="30" height="15"></rect>
+                <rect x="230" y="40" width="30" height="30"></rect>
+                <rect x="40" y="80" width="15" height="15"></rect><rect x="80" y="80" width="15" height="30"></rect>
+                <rect x="105" y="80" width="30" height="15"></rect><rect x="145" y="80" width="15" height="30"></rect>
+                <rect x="170" y="80" width="30" height="15"></rect><rect x="210" y="80" width="15" height="15"></rect>
+                <rect x="230" y="80" width="30" height="15"></rect>
+                <rect x="55" y="105" width="15" height="15"></rect><rect x="85" y="105" width="30" height="30"></rect>
+                <rect x="125" y="105" width="15" height="15"></rect><rect x="160" y="105" width="30" height="30"></rect>
+                <rect x="200" y="105" width="15" height="15"></rect><rect x="230" y="105" width="15" height="30"></rect>
+                <rect x="40" y="130" width="15" height="30"></rect><rect x="70" y="130" width="15" height="15"></rect>
+                <rect x="125" y="130" width="30" height="15"></rect><rect x="195" y="130" width="30" height="15"></rect>
+                <rect x="245" y="130" width="15" height="30"></rect>
+                <rect x="60" y="160" width="30" height="15"></rect><rect x="100" y="160" width="15" height="30"></rect>
+                <rect x="130" y="160" width="30" height="15"></rect><rect x="170" y="160" width="15" height="15"></rect>
+                <rect x="210" y="160" width="30" height="30"></rect>
+                <rect x="40" y="185" width="15" height="15"></rect><rect x="70" y="185" width="15" height="30"></rect>
+                <rect x="105" y="185" width="30" height="15"></rect><rect x="145" y="185" width="15" height="30"></rect>
+                <rect x="175" y="185" width="30" height="15"></rect><rect x="245" y="185" width="15" height="15"></rect>
+                <rect x="40" y="215" width="30" height="30"></rect><rect x="85" y="215" width="15" height="15"></rect>
+                <rect x="115" y="215" width="30" height="15"></rect><rect x="160" y="215" width="15" height="30"></rect>
+                <rect x="195" y="215" width="15" height="15"></rect><rect x="225" y="215" width="15" height="30"></rect>
+                <rect x="85" y="245" width="15" height="15"></rect><rect x="115" y="245" width="30" height="15"></rect>
+                <rect x="160" y="245" width="15" height="15"></rect><rect x="195" y="245" width="30" height="15"></rect>
+              </g>
+              <circle cx="150" cy="150" r="35" fill="var(--accent)"></circle>
+              <text x="150" y="148" text-anchor="middle" fill="#EFE6D2" font-family="Bowlby One, Impact, sans-serif" font-size="14">SCAN</text>
+              <text x="150" y="162" text-anchor="middle" fill="#EFE6D2" font-family="Instrument Serif, serif" font-style="italic" font-size="11">your batch</text>
+            </svg>
+          </div>
+          <div class="process-slide__caption mono ink-dim">BATCH 000.014 · SCAN TO UNLOCK</div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COCKTAIL GENERATOR ============ -->
+<section class="cocktail" id="cocktail" data-screen-label="04 Cocktail">
+  <div class="container">
+    <div class="cocktail-grid">
+      <div class="cocktail-left">
+        <div class="section-label mono ink-dim">AI Bartender — Live</div>
+        <h2>Tell us<br>your <em>mood</em>.<br>We'll pour.</h2>
+        <p class="cocktail-intro">
+          Pick a vibe, adjust the knobs, describe anything else you want. Our model will design a cocktail using NOVA and whatever you've got at home.
+        </p>
+
+        <div class="cocktail-form">
+          <div>
+            <label>Mood</label>
+            <div class="chip-row" data-group="mood">
+              <button class="chip is-active" data-value="contemplative">Contemplative</button>
+              <button class="chip" data-value="celebratory">Celebratory</button>
+              <button class="chip" data-value="dangerous">Dangerous</button>
+              <button class="chip" data-value="cozy">Cozy</button>
+              <button class="chip" data-value="heartbroken">Heartbroken</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Complexity</label>
+            <div class="chip-row" data-group="complexity">
+              <button class="chip" data-value="minimal">3 ingredients</button>
+              <button class="chip is-active" data-value="balanced">5 ingredients</button>
+              <button class="chip" data-value="ornate">Everything you've got</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Flavor lean</label>
+            <div class="chip-row" data-group="flavor">
+              <button class="chip" data-value="citrus">Citrus &amp; bright</button>
+              <button class="chip" data-value="herbal">Herbal &amp; green</button>
+              <button class="chip is-active" data-value="smoky">Smoky &amp; deep</button>
+              <button class="chip" data-value="bitter">Bitter &amp; bracing</button>
+              <button class="chip" data-value="sweet">Sweet &amp; floral</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Anything else? (optional)</label>
+            <input type="text" class="cocktail-input" id="cocktailExtra" placeholder="&quot;no dairy, it's raining, I'm reading Didion&quot;">
+          </div>
+
+          <button class="cocktail-generate" id="cocktailGo">
+            Pour me something
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="cocktail-result" id="cocktailResult">
+        <div class="cocktail-result-head">
+          <div class="mono ink-dim">Cocktail N° <span id="cocktailNum">—</span></div>
+          <div class="result-status idle" id="resultStatus">
+            <span class="led"></span>
+            <span id="resultStatusText">Standby</span>
+          </div>
+        </div>
+
+        <div class="cocktail-empty" id="cocktailEmpty">
+          Waiting for your signal. The bartender is watching the rain.
+        </div>
+
+        <div id="cocktailOutput" style="display:none; flex:1; display:none; flex-direction:column;">
+          <div class="cocktail-result-title" id="outputTitle"></div>
+          <div class="cocktail-result-sub" id="outputSub"></div>
+
+          <div class="cocktail-section-title">Ingredients</div>
+          <ul class="cocktail-ingredients" id="outputIngredients"></ul>
+
+          <div class="cocktail-section-title">Method</div>
+          <div class="cocktail-method" id="outputMethod"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESS ============ -->
+<section class="press" data-screen-label="05 Press">
+  <div class="container">
+    <div class="press-grid">
+      <div class="press-quote">
+        <span class="accent">“</span>A vodka that tastes like someone finally asked the right questions. NOVA is what happens when <em>machines learn restraint</em>.<span class="accent">”</span>
+      </div>
+      <div class="press-logo serif-logo">Esquire</div>
+      <div class="press-logo">WIRED</div>
+      <div class="press-logo serif-logo">Monocle</div>
+      <div class="press-logo">THE DRINKS BUSINESS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="findus" id="findus" data-screen-label="06 Find Us">
+  <div class="container">
+    <div class="findus-head">
+      <div>
+        <div class="section-label mono ink-dim">Find Us</div>
+        <h2>Bars pouring<br>NOVA, today.</h2>
+      </div>
+      <div class="findus-search">
+        <input type="text" placeholder="City or postal code">
+      </div>
+    </div>
+
+    <div class="findus-list">
+      <div class="findus-item">
+        <div class="city">New York, NY</div>
+        <div class="name">Attaboy</div>
+        <div class="addr">134 Eldridge St — Lower East Side</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Brooklyn, NY</div>
+        <div class="name">Long Island Bar</div>
+        <div class="addr">110 Atlantic Ave — Cobble Hill</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Mexico City</div>
+        <div class="name">Licorería Limantour</div>
+        <div class="addr">Álvaro Obregón 106 — Roma Nte.</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Tokyo</div>
+        <div class="name">Bar Benfiddich</div>
+        <div class="addr">9F, 1-13-7 Nishi-Shinjuku</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">London</div>
+        <div class="name">Tayēr + Elementary</div>
+        <div class="addr">152 Old St — Shoreditch</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Warsaw</div>
+        <div class="name">Kita Koguta</div>
+        <div class="addr">Plac Grzybowski 4 — Śródmieście</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Berlin</div>
+        <div class="name">Buck &amp; Breck</div>
+        <div class="addr">Brunnenstraße 177 — Mitte</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Paris</div>
+        <div class="name">Le Syndicat</div>
+        <div class="addr">51 Rue du Faubourg Saint-Denis</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Los Angeles</div>
+        <div class="name">Thunderbolt</div>
+        <div class="addr">1263 W Temple St — Echo Park</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="07 Footer">
+  <div class="container">
+    <div class="footer-super" id="footerSuper">
+      NOVA<br>
+      <span class="hollow">VODKA</span>
+    </div>
+
+    <div class="footer-news">
+      <p>The batch drops when the model says it's ready. <em>Don't miss it.</em></p>
+      <form class="footer-news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='◉ You\'re on the list.';">
+        <input type="email" placeholder="your email" required="">
+        <button type="submit">Subscribe <span class="arrow">→</span></button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-col">
+        <h4>NOVA</h4>
+        <p style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.3;color:var(--ink-dim);max-width:320px;">
+          Distilled in Warsaw. Designed by intelligence. Drink slow, question everything.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">NOVA 750ml</a></li>
+          <li><a href="#">Gift Edition</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">The Distillery</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div>© 2026 NOVA Distillery · Warsaw, PL</div>
+      <div>Please drink responsibly · 21+</div>
+      <div>Batch 000.014</div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.content-flow -->
+
+<!-- ============ TWEAKS PANEL ============ -->
+<div class="tweaks-panel" id="tweaksPanel">
+  <h3>Tweaks <span class="accent">◉</span></h3>
+  <div class="tweak-row">
+    <label>Accent color</label>
+    <div class="swatch-row" id="swatchAccent">
+      <div class="swatch is-active" data-color="#C0441E" style="background:#C0441E"></div>
+      <div class="swatch" data-color="#D97757" style="background:#D97757"></div>
+      <div class="swatch" data-color="#B8352B" style="background:#B8352B"></div>
+      <div class="swatch" data-color="#6B8AFF" style="background:#6B8AFF"></div>
+      <div class="swatch" data-color="#7FB069" style="background:#7FB069"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Background</label>
+    <div class="swatch-row" id="swatchBg">
+      <div class="swatch is-active" data-color="#0a0908" style="background:#0a0908"></div>
+      <div class="swatch" data-color="#0b0f1a" style="background:#0b0f1a"></div>
+      <div class="swatch" data-color="#2a1810" style="background:#2a1810"></div>
+      <div class="swatch" data-color="#1a1410" style="background:#1a1410"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Hero bg type scale</label>
+    <input type="range" id="tweakScale" min="20" max="48" step="1" value="32" style="width:100%;accent-color:var(--accent)">
+  </div>
+  <div class="tweak-row">
+    <label>Film grain</label>
+    <input type="range" id="tweakGrain" min="0" max="80" step="5" value="35" style="width:100%;accent-color:var(--accent)">
+  </div>
+</div>
+
+<script>
+  // Tweak defaults (host-managed)
+  window.TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+    "accentColor": "#C0441E",
+    "bgColor": "#0a0908",
+    "heroScale": 32,
+    "grain": 35
+  }/*EDITMODE-END*/;
+</script>
+<script src="5ef10e7e-4746-4aee-a96e-34e30b8d2de3"></script>
+<script src="784d782e-66bf-402f-9370-250cb3da3c3f"></script>
+<script src="60c78c88-9d43-4a64-9c15-8ead1a3e299c"></script>
+<script src="309561eb-6a91-4b57-b5ef-b9eeb48b5dc3"></script>
+
+
+</body></html>

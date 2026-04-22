@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0908;
+  --color-bg-2: #121010;
+  --color-ink: #EFE6D2;
+  --color-ink-dim: rgba(239, 230, 210, 0.55);
+  --color-ink-ghost: rgba(239, 230, 210, 0.12);
+  --color-accent: #C0441E;
+  --color-accent-deep: #8a2f14;
+  --color-accent-glow: #e65a2b;
+  --color-line: rgba(239, 230, 210, 0.15);
+
+  --font-display: var(--font-bowlby);
+  --font-serif: var(--font-instrument);
+  --font-mono: var(--font-jetbrains);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+body {
+  position: relative;
+}
+
+/* Film grain + vignette overlays */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.9  0 0 0 0 0.82  0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Base typography helpers */
+.font-display {
+  font-family: var(--font-display), "Staatliches", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.font-mono-ui {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px var(--color-ink);
+  color: transparent;
+}
+
+/* Reveal utility used by GSAP ScrollTrigger */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s var(--ease-out-expo);
+}
+
+/* SplitText-style line reveal */
+.split-line {
+  display: block;
+  overflow: hidden;
+}
+
+.split-line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s var(--ease-out-expo);
+  will-change: transform;
+}
+
+.split-line.is-in > span,
+.is-visible .split-line > span {
+  transform: translateY(0);
+}
+
+/* Keyframes reused across sections */
+@keyframes nova-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes nova-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nova-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes nova-drop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.01% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.animate-pulse-dot {
+  animation: nova-pulse 1.8s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: nova-spin 18s linear infinite;
+}
+
+.animate-marquee {
+  animation: nova-marquee 40s linear infinite;
+}
+
+.animate-drop-bar {
+  animation: nova-drop 2s ease-in-out infinite;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,542 @@
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-logo">NOVA<span style="color:var(--accent)">◉</span></div>
+  <ul class="nav-links">
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#cocktail">AI Bartender</a></li>
+    <li><a href="#findus">Find Us</a></li>
+  </ul>
+  <button class="nav-cart">Shop — 0</button>
+</nav>
+
+<!-- WebGL bottle canvas (outside hero so it can overlap content below) -->
+<canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+<!-- ============ HERO (virtual-scroll + WebGL) ============ -->
+<section class="hero" data-screen-label="01 Hero" id="hero">
+  <!-- Giant parallax type behind bottle -->
+  <div class="hero-type" data-parallax-y="-0.25" data-parallax-scale="0.4">
+    <div class="hero-type__line hero-type__line--outline">NOVA</div>
+    <div class="hero-type__line">NOVA</div>
+  </div>
+
+  <!-- Top meta -->
+  <div class="hero-meta-top" data-parallax-y="0.08" data-fade="1">
+    <div class="mono ink-dim">
+      N°001 — LIMITED DROP<br>
+      <span class="accent">■</span> BATCH 000.014
+    </div>
+    <div class="mono ink-dim" style="text-align:right">
+      EST. 2026 / DISTILLED BY<br>
+      NEURAL NETWORK
+    </div>
+  </div>
+
+  <!-- Spinning badge -->
+  <div class="hero-badge" data-parallax-y="0.35" data-fade="1.2">
+    <svg viewBox="0 0 130 130" width="130" height="130">
+      <defs>
+        <path id="circle" d="M 65, 65 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"></path>
+      </defs>
+      <text font-family="Bowlby One, Impact, sans-serif" font-size="10" fill="#EFE6D2" letter-spacing="3">
+        <textPath href="#circle">NEURAL DISTILLED · LIMITED BATCH · NEURAL DISTILLED · LIMITED BATCH · </textPath>
+      </text>
+      <circle cx="65" cy="65" r="28" fill="#C0441E"></circle>
+      <text x="65" y="62" text-anchor="middle" fill="#EFE6D2" font-family="Bowlby One, Impact, sans-serif" font-size="11" letter-spacing="1">NEW</text>
+      <text x="65" y="75" text-anchor="middle" fill="#EFE6D2" font-family="Instrument Serif, serif" font-style="italic" font-size="8">batch 14</text>
+    </svg>
+  </div>
+
+  <!-- Bottom meta -->
+  <div class="hero-meta-bottom" data-parallax-y="0.3" data-fade="1">
+    <div class="hero-tag" data-split-lines="">
+      Distilled from winter wheat and a neural network trained on 4,000 years of spirit-making. <em>Precise. Smooth. Intelligent.</em>
+    </div>
+    <button class="hero-cta">
+      <span class="dot"></span>
+      Reserve a bottle
+    </button>
+    <div class="mono ink-dim" style="text-align:right">
+      SCROLL TO ENTER<br>
+      <span class="accent">↓</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENT FLOW (sits above fixed hero) ============ -->
+<div class="content-flow">
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Neural Distilled</span><span class="marquee-sep">◉</span>
+    <span>Precision Blended</span><span class="marquee-sep">◉</span>
+    <span>40% ABV</span><span class="marquee-sep">◉</span>
+    <span>Batch 000.014</span><span class="marquee-sep">◉</span>
+    <span>Est. 2026</span><span class="marquee-sep">◉</span>
+    <span>Neural Distilled</span><span class="marquee-sep">◉</span>
+    <span>Precision Blended</span><span class="marquee-sep">◉</span>
+    <span>40% ABV</span><span class="marquee-sep">◉</span>
+    <span>Batch 000.014</span><span class="marquee-sep">◉</span>
+    <span>Est. 2026</span><span class="marquee-sep">◉</span>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto" id="manifesto" data-screen-label="02 Manifesto">
+  <div class="container">
+    <div class="manifesto-head">
+      <div>
+        <div class="section-label mono ink-dim">Manifesto — N°01</div>
+        <h3 class="display-condensed" style="font-size:32px;">For the new era of spirits</h3>
+      </div>
+      <div class="mono ink-dim" style="max-width:280px;">
+        A letter from the distillery /<br>
+        <span class="accent">— The founders</span>
+      </div>
+    </div>
+
+    <img src="bbed3649-88e7-4631-99ee-b81121617a77" class="manifesto-bottle" alt="" data-reveal-bottle="" style="display:none">
+
+    <div class="manifesto-body" id="manifestoBody">
+      <span class="reveal-line"><span>We trained a neural network on four</span></span>
+      <span class="reveal-line"><span>thousand years of <em>spirit-making</em>.</span></span>
+      <span class="reveal-line"><span>It studied every still, every grain,</span></span>
+      <span class="reveal-line"><span>every mistake and masterpiece —</span></span>
+      <span class="reveal-line"><span>then designed a vodka that shouldn't</span></span>
+      <span class="reveal-line"><span>exist. <em>So we built it.</em></span></span>
+    </div>
+
+    <div class="manifesto-foot" id="manifestoFoot">
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="4,287">0</div>
+        <div class="lbl">distillation simulations run before the first drop</div>
+      </div>
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="97.4%">0</div>
+        <div class="lbl">mouthfeel correlation vs. human master blender</div>
+      </div>
+      <div class="manifesto-stat">
+        <div class="num scramble" data-target="000.014">0</div>
+        <div class="lbl">current batch, distilled in Warsaw, Poland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS (scroll-linked carousel) ============ -->
+<section class="process" id="process" data-screen-label="03 Process">
+  <div class="process-pin">
+    <div class="process-stage">
+
+      <!-- LEFT: step info (cross-fades with active step) -->
+      <aside class="process-info">
+        <div class="section-label mono ink-dim">The Process</div>
+        <h2 class="process-heading">How a machine<br>learns to <em>taste</em>.</h2>
+
+        <div class="process-steps" id="processSteps">
+          <article class="process-step is-active" data-step="0">
+            <div class="process-step__num">01</div>
+            <div class="process-step__label mono ink-dim">— Step One</div>
+            <h3 class="process-step__title">We feed it history.</h3>
+            <p class="process-step__desc">A corpus of 4,287 recipes, tasting notes from Michelin somms, and mass spectrometry of every vodka distilled in the last century. The model learns what <em>"smooth"</em> actually means at a molecular level.</p>
+          </article>
+          <article class="process-step" data-step="1">
+            <div class="process-step__num">02</div>
+            <div class="process-step__label mono ink-dim">— Step Two</div>
+            <h3 class="process-step__title">It designs the still.</h3>
+            <p class="process-step__desc">The model proposes geometries our master distiller never would — 11 plates instead of 9, a cooler condensation curve, triple filtration through volcanic charcoal <em>and</em> silver. We build what it recommends.</p>
+          </article>
+          <article class="process-step" data-step="2">
+            <div class="process-step__num">03</div>
+            <div class="process-step__label mono ink-dim">— Step Three</div>
+            <h3 class="process-step__title">We taste. It listens.</h3>
+            <p class="process-step__desc">Every batch is blind-tested by twelve human palates. Their notes — too sweet, metallic finish, echoes of rye — feed back into the model. It re-tunes. We re-distill. After 47 iterations, something new.</p>
+          </article>
+          <article class="process-step" data-step="3">
+            <div class="process-step__num">04</div>
+            <div class="process-step__label mono ink-dim">— Step Four</div>
+            <h3 class="process-step__title">The bottle ships.</h3>
+            <p class="process-step__desc">Each bottle carries a unique batch signature. Scan it, and the model tells you exactly which iteration you're drinking — and generates a cocktail tuned to <em>your</em> palate. That's next.</p>
+          </article>
+        </div>
+
+        <div class="process-pagination" id="processPagination">
+          <span class="process-pagination__count"><span id="processStepCurrent">01</span> <span class="process-pagination__sep">/</span> 04</span>
+          <div class="process-pagination__track">
+            <div class="process-pagination__fill" id="processProgress"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: card reel -->
+      <div class="process-reel" id="processReel">
+
+        <!-- Card 1 — DATA -->
+        <article class="process-slide" data-slide="0">
+          <div class="process-slide__tag mono">01 · DATA</div>
+          <div class="process-slide__frame" style="background:#1a0f0b;overflow:hidden;">
+            <img src="686afa56-0246-4714-a261-4068619b1438" alt="Woman with red lips and red nails sipping vodka on the rocks" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="process-slide__caption mono ink-dim">4,287 RECIPES · 1.2M DATAPOINTS</div>
+        </article>
+
+        <!-- Card 2 — STILL -->
+        <article class="process-slide" data-slide="1">
+          <div class="process-slide__tag mono">02 · DESIGN</div>
+          <div class="process-slide__frame" style="background:#0f0d0c;overflow:hidden;">
+            <img src="bab0294e-88ae-4fdf-8e67-509eae799620" alt="Hand-drawn distillation column blueprint with compass and ink bottle" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="process-slide__caption mono ink-dim">GEOMETRY BY NEURAL NET · BUILT IN WARSAW</div>
+        </article>
+
+        <!-- Card 3 — FEEDBACK -->
+        <article class="process-slide" data-slide="2">
+          <div class="process-slide__tag mono">03 · TASTE</div>
+          <div class="process-slide__frame" style="background: linear-gradient(165deg, var(--accent) 0%, #8a2f14 100%); color: var(--bg);">
+            <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="padding:60px;box-sizing:border-box">
+              <g fill="#0a0908">
+                <rect x="10" y="140" width="4" height="20"></rect><rect x="20" y="120" width="4" height="60"></rect>
+                <rect x="30" y="80" width="4" height="140"></rect><rect x="40" y="100" width="4" height="100"></rect>
+                <rect x="50" y="60" width="4" height="180"></rect><rect x="60" y="90" width="4" height="120"></rect>
+                <rect x="70" y="130" width="4" height="40"></rect><rect x="80" y="100" width="4" height="100"></rect>
+                <rect x="90" y="70" width="4" height="160"></rect><rect x="100" y="110" width="4" height="80"></rect>
+                <rect x="110" y="90" width="4" height="120"></rect><rect x="120" y="130" width="4" height="40"></rect>
+                <rect x="130" y="80" width="4" height="140"></rect><rect x="140" y="100" width="4" height="100"></rect>
+                <rect x="150" y="60" width="4" height="180"></rect><rect x="160" y="90" width="4" height="120"></rect>
+                <rect x="170" y="120" width="4" height="60"></rect><rect x="180" y="70" width="4" height="160"></rect>
+                <rect x="190" y="100" width="4" height="100"></rect><rect x="200" y="50" width="4" height="200"></rect>
+                <rect x="210" y="80" width="4" height="140"></rect><rect x="220" y="110" width="4" height="80"></rect>
+                <rect x="230" y="70" width="4" height="160"></rect><rect x="240" y="90" width="4" height="120"></rect>
+                <rect x="250" y="130" width="4" height="40"></rect><rect x="260" y="100" width="4" height="100"></rect>
+                <rect x="270" y="60" width="4" height="180"></rect><rect x="280" y="120" width="4" height="60"></rect>
+                <rect x="290" y="90" width="4" height="120"></rect><rect x="300" y="70" width="4" height="160"></rect>
+                <rect x="310" y="110" width="4" height="80"></rect><rect x="320" y="100" width="4" height="100"></rect>
+                <rect x="330" y="130" width="4" height="40"></rect><rect x="340" y="80" width="4" height="140"></rect>
+                <rect x="350" y="100" width="4" height="100"></rect><rect x="360" y="120" width="4" height="60"></rect>
+                <rect x="370" y="140" width="4" height="20"></rect>
+              </g>
+              <text x="10" y="285" fill="#0a0908" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1">FEEDBACK LOOP · 47 ITERATIONS</text>
+            </svg>
+          </div>
+          <div class="process-slide__caption mono ink-dim">12 HUMAN PALATES · 47 BATCHES</div>
+        </article>
+
+        <!-- Card 4 — SHIP -->
+        <article class="process-slide" data-slide="3">
+          <div class="process-slide__tag mono">04 · SHIP</div>
+          <div class="process-slide__frame" style="background: linear-gradient(165deg, #14100e 0%, #2a1810 100%);">
+            <svg viewBox="0 0 300 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="padding:60px;box-sizing:border-box">
+              <g fill="#EFE6D2">
+                <rect x="40" y="40" width="30" height="30"></rect><rect x="80" y="40" width="15" height="15"></rect>
+                <rect x="105" y="40" width="15" height="30"></rect><rect x="130" y="40" width="30" height="15"></rect>
+                <rect x="170" y="40" width="15" height="30"></rect><rect x="195" y="40" width="30" height="15"></rect>
+                <rect x="230" y="40" width="30" height="30"></rect>
+                <rect x="40" y="80" width="15" height="15"></rect><rect x="80" y="80" width="15" height="30"></rect>
+                <rect x="105" y="80" width="30" height="15"></rect><rect x="145" y="80" width="15" height="30"></rect>
+                <rect x="170" y="80" width="30" height="15"></rect><rect x="210" y="80" width="15" height="15"></rect>
+                <rect x="230" y="80" width="30" height="15"></rect>
+                <rect x="55" y="105" width="15" height="15"></rect><rect x="85" y="105" width="30" height="30"></rect>
+                <rect x="125" y="105" width="15" height="15"></rect><rect x="160" y="105" width="30" height="30"></rect>
+                <rect x="200" y="105" width="15" height="15"></rect><rect x="230" y="105" width="15" height="30"></rect>
+                <rect x="40" y="130" width="15" height="30"></rect><rect x="70" y="130" width="15" height="15"></rect>
+                <rect x="125" y="130" width="30" height="15"></rect><rect x="195" y="130" width="30" height="15"></rect>
+                <rect x="245" y="130" width="15" height="30"></rect>
+                <rect x="60" y="160" width="30" height="15"></rect><rect x="100" y="160" width="15" height="30"></rect>
+                <rect x="130" y="160" width="30" height="15"></rect><rect x="170" y="160" width="15" height="15"></rect>
+                <rect x="210" y="160" width="30" height="30"></rect>
+                <rect x="40" y="185" width="15" height="15"></rect><rect x="70" y="185" width="15" height="30"></rect>
+                <rect x="105" y="185" width="30" height="15"></rect><rect x="145" y="185" width="15" height="30"></rect>
+                <rect x="175" y="185" width="30" height="15"></rect><rect x="245" y="185" width="15" height="15"></rect>
+                <rect x="40" y="215" width="30" height="30"></rect><rect x="85" y="215" width="15" height="15"></rect>
+                <rect x="115" y="215" width="30" height="15"></rect><rect x="160" y="215" width="15" height="30"></rect>
+                <rect x="195" y="215" width="15" height="15"></rect><rect x="225" y="215" width="15" height="30"></rect>
+                <rect x="85" y="245" width="15" height="15"></rect><rect x="115" y="245" width="30" height="15"></rect>
+                <rect x="160" y="245" width="15" height="15"></rect><rect x="195" y="245" width="30" height="15"></rect>
+              </g>
+              <circle cx="150" cy="150" r="35" fill="var(--accent)"></circle>
+              <text x="150" y="148" text-anchor="middle" fill="#EFE6D2" font-family="Bowlby One, Impact, sans-serif" font-size="14">SCAN</text>
+              <text x="150" y="162" text-anchor="middle" fill="#EFE6D2" font-family="Instrument Serif, serif" font-style="italic" font-size="11">your batch</text>
+            </svg>
+          </div>
+          <div class="process-slide__caption mono ink-dim">BATCH 000.014 · SCAN TO UNLOCK</div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COCKTAIL GENERATOR ============ -->
+<section class="cocktail" id="cocktail" data-screen-label="04 Cocktail">
+  <div class="container">
+    <div class="cocktail-grid">
+      <div class="cocktail-left">
+        <div class="section-label mono ink-dim">AI Bartender — Live</div>
+        <h2>Tell us<br>your <em>mood</em>.<br>We'll pour.</h2>
+        <p class="cocktail-intro">
+          Pick a vibe, adjust the knobs, describe anything else you want. Our model will design a cocktail using NOVA and whatever you've got at home.
+        </p>
+
+        <div class="cocktail-form">
+          <div>
+            <label>Mood</label>
+            <div class="chip-row" data-group="mood">
+              <button class="chip is-active" data-value="contemplative">Contemplative</button>
+              <button class="chip" data-value="celebratory">Celebratory</button>
+              <button class="chip" data-value="dangerous">Dangerous</button>
+              <button class="chip" data-value="cozy">Cozy</button>
+              <button class="chip" data-value="heartbroken">Heartbroken</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Complexity</label>
+            <div class="chip-row" data-group="complexity">
+              <button class="chip" data-value="minimal">3 ingredients</button>
+              <button class="chip is-active" data-value="balanced">5 ingredients</button>
+              <button class="chip" data-value="ornate">Everything you've got</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Flavor lean</label>
+            <div class="chip-row" data-group="flavor">
+              <button class="chip" data-value="citrus">Citrus &amp; bright</button>
+              <button class="chip" data-value="herbal">Herbal &amp; green</button>
+              <button class="chip is-active" data-value="smoky">Smoky &amp; deep</button>
+              <button class="chip" data-value="bitter">Bitter &amp; bracing</button>
+              <button class="chip" data-value="sweet">Sweet &amp; floral</button>
+            </div>
+          </div>
+
+          <div>
+            <label>Anything else? (optional)</label>
+            <input type="text" class="cocktail-input" id="cocktailExtra" placeholder="&quot;no dairy, it's raining, I'm reading Didion&quot;">
+          </div>
+
+          <button class="cocktail-generate" id="cocktailGo">
+            Pour me something
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="cocktail-result" id="cocktailResult">
+        <div class="cocktail-result-head">
+          <div class="mono ink-dim">Cocktail N° <span id="cocktailNum">—</span></div>
+          <div class="result-status idle" id="resultStatus">
+            <span class="led"></span>
+            <span id="resultStatusText">Standby</span>
+          </div>
+        </div>
+
+        <div class="cocktail-empty" id="cocktailEmpty">
+          Waiting for your signal. The bartender is watching the rain.
+        </div>
+
+        <div id="cocktailOutput" style="display:none; flex:1; display:none; flex-direction:column;">
+          <div class="cocktail-result-title" id="outputTitle"></div>
+          <div class="cocktail-result-sub" id="outputSub"></div>
+
+          <div class="cocktail-section-title">Ingredients</div>
+          <ul class="cocktail-ingredients" id="outputIngredients"></ul>
+
+          <div class="cocktail-section-title">Method</div>
+          <div class="cocktail-method" id="outputMethod"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESS ============ -->
+<section class="press" data-screen-label="05 Press">
+  <div class="container">
+    <div class="press-grid">
+      <div class="press-quote">
+        <span class="accent">“</span>A vodka that tastes like someone finally asked the right questions. NOVA is what happens when <em>machines learn restraint</em>.<span class="accent">”</span>
+      </div>
+      <div class="press-logo serif-logo">Esquire</div>
+      <div class="press-logo">WIRED</div>
+      <div class="press-logo serif-logo">Monocle</div>
+      <div class="press-logo">THE DRINKS BUSINESS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="findus" id="findus" data-screen-label="06 Find Us">
+  <div class="container">
+    <div class="findus-head">
+      <div>
+        <div class="section-label mono ink-dim">Find Us</div>
+        <h2>Bars pouring<br>NOVA, today.</h2>
+      </div>
+      <div class="findus-search">
+        <input type="text" placeholder="City or postal code">
+      </div>
+    </div>
+
+    <div class="findus-list">
+      <div class="findus-item">
+        <div class="city">New York, NY</div>
+        <div class="name">Attaboy</div>
+        <div class="addr">134 Eldridge St — Lower East Side</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Brooklyn, NY</div>
+        <div class="name">Long Island Bar</div>
+        <div class="addr">110 Atlantic Ave — Cobble Hill</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Mexico City</div>
+        <div class="name">Licorería Limantour</div>
+        <div class="addr">Álvaro Obregón 106 — Roma Nte.</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Tokyo</div>
+        <div class="name">Bar Benfiddich</div>
+        <div class="addr">9F, 1-13-7 Nishi-Shinjuku</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">London</div>
+        <div class="name">Tayēr + Elementary</div>
+        <div class="addr">152 Old St — Shoreditch</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Warsaw</div>
+        <div class="name">Kita Koguta</div>
+        <div class="addr">Plac Grzybowski 4 — Śródmieście</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Berlin</div>
+        <div class="name">Buck &amp; Breck</div>
+        <div class="addr">Brunnenstraße 177 — Mitte</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Paris</div>
+        <div class="name">Le Syndicat</div>
+        <div class="addr">51 Rue du Faubourg Saint-Denis</div>
+      </div>
+      <div class="findus-item">
+        <div class="city">Los Angeles</div>
+        <div class="name">Thunderbolt</div>
+        <div class="addr">1263 W Temple St — Echo Park</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="07 Footer">
+  <div class="container">
+    <div class="footer-super" id="footerSuper">
+      NOVA<br>
+      <span class="hollow">VODKA</span>
+    </div>
+
+    <div class="footer-news">
+      <p>The batch drops when the model says it's ready. <em>Don't miss it.</em></p>
+      <form class="footer-news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='◉ You\'re on the list.';">
+        <input type="email" placeholder="your email" required="">
+        <button type="submit">Subscribe <span class="arrow">→</span></button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-col">
+        <h4>NOVA</h4>
+        <p style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.3;color:var(--ink-dim);max-width:320px;">
+          Distilled in Warsaw. Designed by intelligence. Drink slow, question everything.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">NOVA 750ml</a></li>
+          <li><a href="#">Gift Edition</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">The Distillery</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div>© 2026 NOVA Distillery · Warsaw, PL</div>
+      <div>Please drink responsibly · 21+</div>
+      <div>Batch 000.014</div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.content-flow -->
+
+<!-- ============ TWEAKS PANEL ============ -->
+<div class="tweaks-panel" id="tweaksPanel">
+  <h3>Tweaks <span class="accent">◉</span></h3>
+  <div class="tweak-row">
+    <label>Accent color</label>
+    <div class="swatch-row" id="swatchAccent">
+      <div class="swatch is-active" data-color="#C0441E" style="background:#C0441E"></div>
+      <div class="swatch" data-color="#D97757" style="background:#D97757"></div>
+      <div class="swatch" data-color="#B8352B" style="background:#B8352B"></div>
+      <div class="swatch" data-color="#6B8AFF" style="background:#6B8AFF"></div>
+      <div class="swatch" data-color="#7FB069" style="background:#7FB069"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Background</label>
+    <div class="swatch-row" id="swatchBg">
+      <div class="swatch is-active" data-color="#0a0908" style="background:#0a0908"></div>
+      <div class="swatch" data-color="#0b0f1a" style="background:#0b0f1a"></div>
+      <div class="swatch" data-color="#2a1810" style="background:#2a1810"></div>
+      <div class="swatch" data-color="#1a1410" style="background:#1a1410"></div>
+    </div>
+  </div>
+  <div class="tweak-row">
+    <label>Hero bg type scale</label>
+    <input type="range" id="tweakScale" min="20" max="48" step="1" value="32" style="width:100%;accent-color:var(--accent)">
+  </div>
+  <div class="tweak-row">
+    <label>Film grain</label>
+    <input type="range" id="tweakGrain" min="0" max="80" step="5" value="35" style="width:100%;accent-color:var(--accent)">
+  </div>
+</div>
+
+<script>
+  // Tweak defaults (host-managed)
+  window.TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+    "accentColor": "#C0441E",
+    "bgColor": "#0a0908",
+    "heroScale": 32,
+    "grain": 35
+  }/*EDITMODE-END*/;
+</script>
+<script src="5ef10e7e-4746-4aee-a96e-34e30b8d2de3"></script>
+<script src="784d782e-66bf-402f-9370-250cb3da3c3f"></script>
+<script src="60c78c88-9d43-4a64-9c15-8ead1a3e299c"></script>
+<script src="309561eb-6a91-4b57-b5ef-b9eeb48b5dc3"></script>
+
+
+</body>
