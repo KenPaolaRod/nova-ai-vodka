@@ -58,6 +58,7 @@ export function Manifesto() {
           {MANIFESTO_LINES.map((line, li) => (
             <span
               key={li}
+              data-manifesto-first-line={li === 0 ? "" : undefined}
               className="split-line block overflow-hidden"
               style={{ transitionDelay: `${li * 0.08}s` } as React.CSSProperties}
             >

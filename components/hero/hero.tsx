@@ -164,8 +164,8 @@ export function Hero() {
 
         {/* Bottom meta */}
         <div
-          data-parallax-y="0.3"
-          className="absolute bottom-10 left-9 right-9 z-[4] flex flex-col items-start justify-between gap-10 md:flex-row md:items-end will-change-transform"
+          data-parallax-scale="0.4"
+          className="absolute bottom-10 left-9 right-9 z-[4] flex flex-col items-start justify-between gap-10 md:flex-row md:items-end"
         >
           <p
             className="hero-split split-line max-w-[380px] text-[20px] italic leading-[1.25] text-ink-dim"
@@ -176,7 +176,10 @@ export function Hero() {
               spirit-making. <em className="text-ink">Precise. Smooth. Intelligent.</em>
             </span>
           </p>
+        </div>
 
+        {/* Centered CTA */}
+        <div className="pointer-events-none absolute bottom-10 left-1/2 z-[5] -translate-x-1/2">
           <motion.button
             whileHover={{ y: -2 }}
             whileTap={{ y: 0 }}
@@ -185,18 +188,6 @@ export function Hero() {
             <span className="animate-pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-bg" />
             Reserve a bottle
           </motion.button>
-
-          <div className="font-mono-ui text-right text-ink-dim">
-            SCROLL TO ENTER
-            <br />
-            <span className="text-accent">↓</span>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-[30px] left-1/2 z-[3] flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.2em] text-ink-dim font-mono">
-          <span style={{ fontFamily: "var(--font-mono)" }}>SCROLL</span>
-          <span className="animate-drop-bar block h-10 w-px bg-gradient-to-b from-transparent to-ink-dim" />
         </div>
       </section>
     </>
