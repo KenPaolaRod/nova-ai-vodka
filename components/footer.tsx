@@ -40,7 +40,7 @@ export function Footer() {
       <Container>
         <div
           className="font-display mb-[60px] text-center leading-[0.78] tracking-[-0.03em] text-accent"
-          style={{ fontSize: "clamp(120px, 22vw, 360px)" }}
+          style={{ fontSize: "clamp(72px, 22vw, 360px)" }}
         >
           NOVA
           <br />
@@ -75,12 +75,12 @@ export function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={submitted ? "◉ You're on the list." : "your email"}
-              className="flex-1 border-0 bg-transparent py-3.5 text-[20px] text-ink outline-none placeholder:italic placeholder:text-ink-ghost"
+              className="min-w-0 flex-1 border-0 bg-transparent py-3.5 text-[16px] text-ink outline-none placeholder:italic placeholder:text-ink-ghost md:text-[20px]"
               style={{ fontFamily: "var(--font-instrument)" }}
             />
             <button
               type="submit"
-              className="nova-arrow-btn font-display inline-flex cursor-pointer items-center gap-2.5 border-0 bg-transparent py-3.5 pl-6 pr-0 text-[13px] uppercase tracking-[0.12em] text-ink"
+              className="nova-arrow-btn font-display inline-flex shrink-0 cursor-pointer items-center gap-1.5 border-0 bg-transparent py-3.5 pl-3 pr-0 text-[11px] uppercase tracking-[0.1em] text-ink md:gap-2.5 md:pl-6 md:text-[13px] md:tracking-[0.12em]"
             >
               Subscribe{" "}
               <span aria-hidden className="nova-arrow inline-block transition-transform duration-300">

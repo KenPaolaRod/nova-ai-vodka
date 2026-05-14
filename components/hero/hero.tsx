@@ -42,6 +42,19 @@ export function Hero() {
         },
       });
 
+      // Fade out remaining hero ornaments (top meta, badge, CTA) so they
+      // don't bleed through transparent sections below.
+      gsap.to("[data-hero-fade]", {
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: root,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
       // Line reveal on mount
       gsap.to(".hero-split.split-line", {
         onStart: () => {
@@ -82,14 +95,14 @@ export function Hero() {
           <span
             aria-hidden
             className="font-display absolute whitespace-nowrap leading-[0.82] text-transparent [-webkit-text-stroke:2px_rgba(192,68,30,0.28)]"
-            style={{ fontSize: "clamp(240px, 38vw, 640px)", letterSpacing: "-0.03em" }}
+            style={{ fontSize: "clamp(140px, 38vw, 640px)", letterSpacing: "-0.03em" }}
           >
             NOVA
           </span>
           <span
             aria-hidden
             className="font-display absolute whitespace-nowrap leading-[0.82] text-accent"
-            style={{ fontSize: "clamp(240px, 38vw, 640px)", letterSpacing: "-0.03em" }}
+            style={{ fontSize: "clamp(140px, 38vw, 640px)", letterSpacing: "-0.03em" }}
           >
             NOVA
           </span>
@@ -99,14 +112,15 @@ export function Hero() {
         {/* Top meta */}
         <div
           data-parallax-y="0.08"
-          className="absolute left-9 right-9 top-[100px] z-[4] flex justify-between will-change-transform"
+          data-hero-fade
+          className="absolute left-5 right-5 top-[80px] z-[4] hidden justify-between gap-4 will-change-transform md:left-9 md:right-9 md:top-[100px] md:flex"
         >
-          <div className="font-mono-ui text-ink-dim">
+          <div className="font-mono-ui text-[10px] text-ink-dim md:text-[11px]">
             N°001 — LIMITED DROP
             <br />
             <span className="text-accent">■</span> BATCH 000.014
           </div>
-          <div className="font-mono-ui text-right text-ink-dim">
+          <div className="font-mono-ui text-right text-[10px] text-ink-dim md:text-[11px]">
             EST. 2026 / DISTILLED BY
             <br />
             NEURAL NETWORK
@@ -116,10 +130,11 @@ export function Hero() {
         {/* Spinning badge */}
         <div
           data-parallax-y="0.35"
-          className="animate-spin-slow absolute right-[8%] top-[26%] z-[4] h-[130px] w-[130px] will-change-transform"
+          data-hero-fade
+          className="animate-spin-slow absolute right-[4%] top-[16%] z-[4] h-[78px] w-[78px] will-change-transform sm:right-[6%] sm:top-[20%] sm:h-[100px] sm:w-[100px] md:right-[8%] md:top-[26%] md:h-[130px] md:w-[130px]"
           aria-hidden
         >
-          <svg viewBox="0 0 130 130" width="130" height="130">
+          <svg viewBox="0 0 130 130" width="100%" height="100%">
             <defs>
               <path
                 id="badge-circle"
@@ -165,10 +180,10 @@ export function Hero() {
         {/* Bottom meta */}
         <div
           data-parallax-scale="0.4"
-          className="absolute bottom-10 left-9 right-9 z-[4] flex flex-col items-start justify-between gap-10 md:flex-row md:items-end"
+          className="absolute bottom-28 left-5 right-5 z-[4] flex flex-col items-start justify-between gap-10 md:left-9 md:right-9 lg:bottom-10 lg:flex-row lg:items-end"
         >
           <p
-            className="hero-split split-line max-w-[380px] text-[20px] italic leading-[1.25] text-ink-dim"
+            className="hero-split split-line max-w-[380px] text-[16px] italic leading-[1.3] text-ink-dim md:text-[20px] md:leading-[1.25]"
             style={{ fontFamily: "var(--font-instrument), serif" }}
           >
             <span>
@@ -179,11 +194,14 @@ export function Hero() {
         </div>
 
         {/* Centered CTA */}
-        <div className="pointer-events-none absolute bottom-10 left-1/2 z-[5] -translate-x-1/2">
+        <div
+          data-hero-fade
+          className="pointer-events-none absolute bottom-8 left-1/2 z-[5] -translate-x-1/2 md:bottom-10"
+        >
           <motion.button
             whileHover={{ y: -2 }}
             whileTap={{ y: 0 }}
-            className="font-display pointer-events-auto inline-flex cursor-pointer items-center gap-3 rounded-full border-0 bg-accent px-7 py-4 text-[13px] uppercase tracking-[0.12em] text-bg transition-[transform,background] duration-300 hover:bg-accent-glow"
+            className="font-display pointer-events-auto inline-flex cursor-pointer items-center gap-3 whitespace-nowrap rounded-full border-0 bg-accent px-6 py-3.5 text-[12px] uppercase tracking-[0.12em] text-bg transition-[transform,background] duration-300 hover:bg-accent-glow md:px-7 md:py-4 md:text-[13px]"
           >
             <span className="animate-pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-bg" />
             Reserve a bottle

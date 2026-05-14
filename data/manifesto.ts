@@ -9,14 +9,18 @@ export const MANIFESTO_LINES: ReadonlyArray<ReadonlyArray<{ text: string; accent
 
 export const MANIFESTO_STATS = [
   {
+    eyebrow: "— 01 / SCALE",
     target: "4,287",
     label: "distillation simulations run before the first drop",
   },
   {
+    eyebrow: "— THE BENCHMARK",
     target: "97.4%",
     label: "mouthfeel correlation vs. human master blender",
+    featured: true,
   },
   {
+    eyebrow: "— 02 / NOW",
     target: "000.014",
     label: "current batch, distilled in Warsaw, Poland",
   },

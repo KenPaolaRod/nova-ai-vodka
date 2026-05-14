@@ -31,7 +31,7 @@ export function FindUs() {
             <h2
               id="findus-title"
               className="font-display mt-4 leading-[0.85] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(64px, 10vw, 160px)" }}
+              style={{ fontSize: "clamp(42px, 11vw, 160px)" }}
             >
               Bars pouring
               <br />
@@ -60,10 +60,17 @@ export function FindUs() {
 
         {filtered.length > 0 ? (
           <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((bar) => (
+            {filtered.map((bar, idx) => {
+              const isLast = idx === filtered.length - 1;
+              const fillRowAtMd = isLast && filtered.length % 2 === 1;
+              return (
               <li
                 key={bar.name}
-                className="flex cursor-pointer flex-col gap-2.5 bg-bg px-7 py-8 transition-colors duration-300 hover:bg-bg-2"
+                className={`flex cursor-pointer flex-col gap-2.5 bg-bg px-7 py-8 transition-colors duration-300 hover:bg-bg-2 ${
+                  fillRowAtMd
+                    ? "md:col-span-2 md:items-center md:text-center lg:col-span-1 lg:items-stretch lg:text-left"
+                    : ""
+                }`}
               >
                 <span
                   className="text-[10px] uppercase tracking-[0.15em] text-accent"
@@ -83,7 +90,8 @@ export function FindUs() {
                   {bar.address}
                 </span>
               </li>
-            ))}
+              );
+            })}
           </ul>
         ) : (
           <p

@@ -63,11 +63,7 @@ export function CocktailGenerator() {
     <section
       id="cocktail"
       aria-labelledby="cocktail-title"
-      className="relative py-40"
-      style={{
-        background:
-          "radial-gradient(circle at 20% 40%, rgba(192, 68, 30, 0.25), transparent 40%), radial-gradient(circle at 80% 60%, rgba(192, 68, 30, 0.15), transparent 50%), var(--color-bg)",
-      }}
+      className="animate-gradient-drift relative py-40"
     >
       <Container>
         <div className="grid grid-cols-1 items-start gap-20 lg:grid-cols-[1.1fr_0.9fr]">

@@ -144,6 +144,30 @@ body::after {
   }
 }
 
+@property --nova-grad-x1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+
+@property --nova-grad-x2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 80%;
+}
+
+@keyframes nova-gradient-drift {
+  0%,
+  100% {
+    --nova-grad-x1: 18%;
+    --nova-grad-x2: 82%;
+  }
+  50% {
+    --nova-grad-x1: 78%;
+    --nova-grad-x2: 22%;
+  }
+}
+
 @keyframes nova-drop {
   0% {
     transform: scaleY(0);
@@ -176,6 +200,22 @@ body::after {
 
 .animate-drop-bar {
   animation: nova-drop 2s ease-in-out infinite;
+}
+
+.animate-gradient-drift {
+  background:
+    radial-gradient(
+      circle at var(--nova-grad-x1) 40%,
+      rgba(192, 68, 30, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at var(--nova-grad-x2) 60%,
+      rgba(192, 68, 30, 0.15),
+      transparent 50%
+    ),
+    var(--color-bg);
+  animation: nova-gradient-drift 16s ease-in-out infinite;
 }
 
 /* Respect user motion preferences */

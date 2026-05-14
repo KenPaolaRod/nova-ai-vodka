@@ -21,12 +21,12 @@ function heroKey(t: number) {
   };
 }
 
-function manifestoKey(t: number) {
+function manifestoKey(t: number, isMobile: boolean) {
   return {
     rx: 0,
-    ry: (1.1 - t * 1.1) * (1 - t),
+    ry: isMobile ? 0 : (1.1 - t * 1.1) * (1 - t),
     rz: 1.3 + t * (-Math.PI / 2 - 1.3),
-    px: 0 + t * 0.95,
+    px: isMobile ? 0 : 0 + t * 0.95,
   };
 }
 
@@ -51,7 +51,9 @@ export function BottleImage() {
 
     const tick = () => {
       const vh = window.innerHeight;
+      const vw = window.innerWidth;
       const scrollY = window.scrollY;
+      const isMobile = vw < 768;
 
       const heroProgress = clamp01(scrollY / (vh * 1.5));
 
@@ -59,29 +61,41 @@ export function BottleImage() {
       let fadeOut = 0;
       let manifestoPy = 0;
       let manifestoSc = 0.35;
-      const firstLineEl = document.querySelector<HTMLElement>(
-        "[data-manifesto-first-line]"
-      );
-      if (firstLineEl) {
-        const fRect = firstLineEl.getBoundingClientRect();
-        const lineCenterFrac = (fRect.top + fRect.height / 2) / vh;
+      // On mobile, anchor the bottle to a dedicated showcase spacer so it
+      // lands in clear space between the manifesto title and body text.
+      const anchorEl = isMobile
+        ? document.querySelector<HTMLElement>("[data-manifesto-bottle-anchor]")
+        : document.querySelector<HTMLElement>("[data-manifesto-first-line]");
+      if (anchorEl) {
+        const aRect = anchorEl.getBoundingClientRect();
+        const centerFrac = (aRect.top + aRect.height / 2) / vh;
 
-        manifestoProgress = clamp01((1 - lineCenterFrac) / (1 - 0.35));
-        manifestoPy = ((0.5 - lineCenterFrac) * 100) / UNIT_VH;
-        fadeOut = clamp01((0.2 - lineCenterFrac) / (0.2 - -0.05));
+        manifestoProgress = clamp01((1 - centerFrac) / (1 - 0.35));
+        manifestoPy = ((0.5 - centerFrac) * 100) / UNIT_VH;
+        fadeOut = clamp01((0.2 - centerFrac) / (0.2 - -0.05));
 
-        const vw = window.innerWidth;
         const wrapperWidthPx = Math.min(vw * 0.72, 1100);
         const wrapperHeightPx = wrapperWidthPx / WRAPPER_ASPECT;
-        const targetHeightPx = fRect.height * BOTTLE_HEIGHT_LINES;
-        manifestoSc = Math.max(
-          0.18,
-          Math.min(0.7, targetHeightPx / wrapperHeightPx)
-        );
+        if (isMobile) {
+          // Fit the bottle inside ~70% of the anchor height while staying
+          // within the screen width.
+          const targetHeightPx = aRect.height * 0.7;
+          const maxScaleByWidth = (vw * 0.92) / wrapperWidthPx;
+          manifestoSc = Math.max(
+            0.5,
+            Math.min(maxScaleByWidth, targetHeightPx / wrapperHeightPx)
+          );
+        } else {
+          const targetHeightPx = aRect.height * BOTTLE_HEIGHT_LINES;
+          manifestoSc = Math.max(
+            0.18,
+            Math.min(0.7, targetHeightPx / wrapperHeightPx)
+          );
+        }
       }
 
       const h = heroKey(heroProgress);
-      const m = manifestoKey(manifestoProgress);
+      const m = manifestoKey(manifestoProgress, isMobile);
       const w = manifestoProgress;
 
       const target = {

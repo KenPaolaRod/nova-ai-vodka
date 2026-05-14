@@ -13,7 +13,7 @@ export function Press() {
           className="mb-[60px] max-w-[1100px] italic leading-[1.2]"
           style={{
             fontFamily: "var(--font-instrument)",
-            fontSize: "clamp(28px, 3vw, 48px)",
+            fontSize: "clamp(22px, 3.2vw, 48px)",
           }}
         >
           <span className="text-accent not-italic" style={{ fontFamily: "var(--font-display)" }}>
